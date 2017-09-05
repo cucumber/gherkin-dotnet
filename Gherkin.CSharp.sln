@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gherkin.Specs", "Gherkin.Sp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gherkin.TokensGenerator", "Gherkin.TokensGenerator\Gherkin.TokensGenerator.csproj", "{4725D7DF-7488-41CC-8F30-90C6A5FB463A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gherkin.TokensGeneratorLib", "Gherkin.TokensGeneratorLib\Gherkin.TokensGeneratorLib.csproj", "{77918F35-3CB3-4A62-95F9-438804A2BF02}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gherkin.TokensGeneratorLib", "Gherkin.TokensGeneratorLib\Gherkin.TokensGeneratorLib.csproj", "{77918F35-3CB3-4A62-95F9-438804A2BF02}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -86,5 +86,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {01DBBC1B-2ADE-4E49-8C44-20FF62840920}
 	EndGlobalSection
 EndGlobal
