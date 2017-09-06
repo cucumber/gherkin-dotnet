@@ -55,17 +55,17 @@ namespace Gherkin
         protected virtual Dictionary<string, GherkinLanguageSetting> LoadLanguageSettings()
         {
             const string languageFileName = "gherkin-languages.json";
-            
-            #if NET45            
+
+            #if NET45
             var assembly = typeof(GherkinDialectProvider).Assembly;
-            var resourceStream = assembly.GetManifestResourceStream(typeof(GherkinDialectProvider), languageFileName);                        
+            var resourceStream = assembly.GetManifestResourceStream(typeof(GherkinDialectProvider), languageFileName);
             #endif
-            
-            #if (NETSTANDARD1_5 || NETCOREAPP1_0 || NETCOREAPP1_1)
-            var assembly = typeof(GherkinDialectProvider).GetTypeInfo().Assembly;            
-            var resourceStream = assembly.GetManifestResourceStream("Gherkin." + languageFileName);            
+
+            #if (NETSTANDARD1_5 || NETSTANDARD2_0 || NETCOREAPP1_0 || NETCOREAPP1_1 || NETCOREAPP2_0)
+            var assembly = typeof(GherkinDialectProvider).GetTypeInfo().Assembly;
+            var resourceStream = assembly.GetManifestResourceStream("Gherkin." + languageFileName);
             #endif
-                                    
+
             if (resourceStream == null)
                 throw new InvalidOperationException("Gherkin language resource not found: " + languageFileName);
             var languagesFileContent = new StreamReader(resourceStream).ReadToEnd();
