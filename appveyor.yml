@@ -34,4 +34,4 @@ test_script:
 
 
 artifacts:
-- path: artifacts\Gherkin.*.nupkg
+- path: '**\Gherkin*.nupkg'
