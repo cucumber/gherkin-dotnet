@@ -1,6 +1,6 @@
 language: csharp
-mono: none
-dotnet: 1.0.1
+mono: latest
+dotnet: 1.1.2
 sudo: false
 
 branches:
