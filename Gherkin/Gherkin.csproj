@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks Condition="'$(OS)' == 'Windows_NT'">netstandard1.5;net45</TargetFrameworks>
-    <TargetFrameworks Condition="'$(OS)' == 'Unix'">netstandard1.5</TargetFrameworks>
+    <TargetFrameworks Condition="'$(OS)' == 'Windows_NT'">netstandard2.0;net45</TargetFrameworks>
+    <TargetFrameworks Condition="'$(OS)' == 'Unix'">netstandard2.0</TargetFrameworks>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -15,7 +15,7 @@
      <PackageTags>specflow gherkin cucumber</PackageTags>
      <PackageProjectUrl>https://github.com/cucumber/gherkin</PackageProjectUrl>
      <PackageIconUrl>https://cucumber.io/images/cucumber-mark-32x32.png</PackageIconUrl>
-     <PackageLicenseUrl>https://github.com/cucumber/gherkin/blob/master/LICENSE</PackageLicenseUrl>     
+     <PackageLicenseUrl>https://github.com/cucumber/gherkin/blob/master/LICENSE</PackageLicenseUrl>
   </PropertyGroup>
 
   <ItemGroup>
