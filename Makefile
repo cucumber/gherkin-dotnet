@@ -71,6 +71,7 @@ clean:
 .PHONY: clean
 
 Gherkin/Parser.cs: gherkin.berp gherkin-csharp.razor berp/berp.exe
+	ls -al
 	rm -f $@
 	mono berp/berp.exe -g gherkin.berp -t gherkin-csharp.razor -o $@
 
