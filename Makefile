@@ -102,7 +102,7 @@ Gherkin/Parser.cs: gherkin.berp gherkin-csharp.razor berp/berp.exe
 	echo "Building on $(UNAME)"
 
 	dotnet restore
-	msbuild
+	dotnet msbuild
 
 	touch $@
 
