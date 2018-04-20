@@ -2,7 +2,7 @@
   <Import Project="../netfx.props" />
   <PropertyGroup>
     <TargetFrameworks>netcoreapp1.1;net452</TargetFrameworks>
-    <RuntimeFrameworkVersion>1.1.7</RuntimeFrameworkVersion>
+    <RuntimeFrameworkVersion>1.1.8</RuntimeFrameworkVersion>
   </PropertyGroup>
 
 
