@@ -21,6 +21,7 @@ init:
 #- appveyor-retry dotnet restore
 
 build_script:
+- dotnet restore
 - dotnet build -c %CONFIGURATION% Gherkin --version-suffix %LABEL%
 - dotnet build -c %CONFIGURATION% Gherkin.CLI --version-suffix %LABEL%
 - dotnet build -c %CONFIGURATION% Gherkin.TokensGenerator --version-suffix %LABEL%
