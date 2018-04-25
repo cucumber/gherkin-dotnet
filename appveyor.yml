@@ -20,6 +20,9 @@ init:
 #before_build:
 #- appveyor-retry dotnet restore
 
+install:
+- dotnet --info
+
 build_script:
 - dotnet restore
 - dotnet build -c %CONFIGURATION% Gherkin --version-suffix %LABEL%
