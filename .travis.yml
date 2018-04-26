@@ -14,4 +14,5 @@ script:
   - sudo apt-get install apt-transport-https
   - sudo apt-get update
   - sudo apt-get install dotnet-sdk-2.1.105
+  - sudo apt-get install dotnet-runtime-2.0.6
   - make
