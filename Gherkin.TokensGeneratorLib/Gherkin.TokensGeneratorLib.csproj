@@ -2,6 +2,10 @@
   <Import Project="../netfx.props" />
   <PropertyGroup>
     <TargetFrameworks>netstandard1.5;net45</TargetFrameworks>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\gherkin.snk</AssemblyOriginatorKeyFile>
+    <PublicSign>true</PublicSign>
+    <DelaySign>false</DelaySign>
   </PropertyGroup>
 
   <ItemGroup>
