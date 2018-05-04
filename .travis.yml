@@ -2,6 +2,7 @@ language: csharp
 dist: trusty
 mono: latest
 sudo: true
+dotnet: 1.1.6
 
 branches:
   only:

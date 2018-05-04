@@ -10,15 +10,15 @@
     <DelaySign>false</DelaySign>
   </PropertyGroup>
 
-
+ 
   <ItemGroup Condition="'$(TargetFramework)'== 'net452'">
-    <Reference Include="System.Runtime" />
-    <Reference Include="System.Threading.Tasks" />
+            <Reference Include="System.Runtime" />
+      <Reference Include="System.Threading.Tasks" />
   </ItemGroup>
 
   <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp2.0'">
     <PackageReference Include="Microsoft.TestPlatform.TestHost" Version="15.6.1" />
-
+    
   </ItemGroup>
 
   <ItemGroup>
