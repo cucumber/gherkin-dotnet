@@ -3,10 +3,6 @@
   <PropertyGroup>
     <OutputType>exe</OutputType>
     <TargetFrameworks>netcoreapp2.0;net45</TargetFrameworks>
-    <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>..\gherkin.snk</AssemblyOriginatorKeyFile>
-    <PublicSign>true</PublicSign>
-    <DelaySign>false</DelaySign>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />

@@ -3,10 +3,6 @@
   <PropertyGroup>
     <OutputType>exe</OutputType>
     <TargetFrameworks>netcoreapp2.0;net45</TargetFrameworks>
-    <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>..\gherkin.snk</AssemblyOriginatorKeyFile>
-    <PublicSign>true</PublicSign>
-    <DelaySign>false</DelaySign>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\Gherkin.TokensGeneratorLib\Gherkin.TokensGeneratorLib.csproj" />

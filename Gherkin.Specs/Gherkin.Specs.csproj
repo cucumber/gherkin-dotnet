@@ -3,26 +3,21 @@
   <PropertyGroup>
     <TargetFrameworks>netcoreapp2.0;net452</TargetFrameworks>
     <RuntimeFrameworkVersion>2.0.6</RuntimeFrameworkVersion>
-
-    <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>..\gherkin.snk</AssemblyOriginatorKeyFile>
-    <PublicSign>true</PublicSign>
-    <DelaySign>false</DelaySign>
   </PropertyGroup>
 
- 
+
   <ItemGroup Condition="'$(TargetFramework)'== 'net452'">
-            <Reference Include="System.Runtime" />
-      <Reference Include="System.Threading.Tasks" />
+    <Reference Include="System.Runtime" />
+    <Reference Include="System.Threading.Tasks" />
   </ItemGroup>
 
   <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp2.0'">
-    <PackageReference Include="Microsoft.TestPlatform.TestHost" Version="15.6.1" />
-    
+    <PackageReference Include="Microsoft.TestPlatform.TestHost" Version="15.7.0" />
+
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.6.1" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.7.0" />
     <PackageReference Include="xunit" Version="2.3.1" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.3.1" />
     <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
@@ -33,7 +28,7 @@
     <ProjectReference Include="..\Gherkin.TokensGeneratorLib\Gherkin.TokensGeneratorLib.csproj" />
     <ProjectReference Include="..\Gherkin\Gherkin.csproj" />
   </ItemGroup>
-  
+
   <ItemGroup>
     <Service Include="{82a7f48d-3b50-4b1e-b82e-3ada8210c358}" />
   </ItemGroup>
