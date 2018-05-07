@@ -27,7 +27,7 @@ install:
   - ps: Invoke-WebRequest -Uri "https://raw.githubusercontent.com/dotnet/cli/rel/1.0.0/scripts/obtain/dotnet-install.ps1" -OutFile "$($env:DOTNET_INSTALL_DIR)/dotnet-install.ps1"
   - ps: '& "$($env:DOTNET_INSTALL_DIR)/dotnet-install.ps1" -Version $env:CLI_VERSION -InstallDir $env:DOTNET_INSTALL_DIR'
   - ps: $env:Path = "$env:DOTNET_INSTALL_DIR;$env:Path"
-- dotnet --info
+  - cmd: dotnet --info
 
 build_script:
 - dotnet build -c %CONFIGURATION% Gherkin --version-suffix %LABEL%
