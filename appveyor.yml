@@ -8,6 +8,7 @@ environment:
   DOTNET_CLI_TELEMETRY_OPTOUT: 1
   GherkinVersion: "5.0.0"
   GherkinPackageVersion: "$(GherkinVersion)-ci$(APPVEYOR_BUILD_NUMBER)"
+  CLI_VERSION: 2.1.105
 
 
 nuget:
@@ -21,6 +22,11 @@ init:
 #- appveyor-retry dotnet restore
 
 install:
+  - ps: $env:DOTNET_INSTALL_DIR = "$pwd\.dotnetsdk"
+  - ps: mkdir $env:DOTNET_INSTALL_DIR -Force | Out-Null
+  - ps: Invoke-WebRequest -Uri "https://raw.githubusercontent.com/dotnet/cli/rel/1.0.0/scripts/obtain/dotnet-install.ps1" -OutFile "$($env:DOTNET_INSTALL_DIR)/dotnet-install.ps1"
+  - ps: '& "$($env:DOTNET_INSTALL_DIR)/dotnet-install.ps1" -Version $env:CLI_VERSION -InstallDir $env:DOTNET_INSTALL_DIR'
+  - ps: $env:Path = "$env:DOTNET_INSTALL_DIR;$env:Path"
 - dotnet --info
 
 build_script:
