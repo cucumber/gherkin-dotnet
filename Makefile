@@ -108,5 +108,5 @@ Gherkin/Parser.cs: gherkin.berp gherkin-csharp.razor berp/berp.exe
 
 .run_tests:
 
-	cd Gherkin.Specs; dotnet xunit -nobuild
+	cd Gherkin.Specs; dotnet xunit -nobuild -fxversion 2.0.7
 	touch $@
